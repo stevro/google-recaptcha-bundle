@@ -1,6 +1,7 @@
 {
   "name": "stev/google-recaptcha-bundle",
   "type": "symfony-bundle",
+  "licence": "GPL",
   "authors": [
     {
       "name": "Stefan Matei",
