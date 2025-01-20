@@ -17,7 +17,7 @@ use Symfony\Component\Validator\Constraint;
  * @Annotation
  */
 #[\Attribute]
-class Recaptcha extends Constraint
+class RecaptchaV2 extends Constraint
 {
 
     public function getTargets()
@@ -27,7 +27,7 @@ class Recaptcha extends Constraint
 
     public function validatedBy()
     {
-        return RecaptchaValidator::class;
+        return RecaptchaV2Validator::class;
     }
 
 }

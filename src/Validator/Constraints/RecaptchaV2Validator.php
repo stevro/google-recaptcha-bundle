@@ -7,7 +7,7 @@
 
 namespace Stev\GoogleRecaptchaBundle\src\Validator\Constraints;
 
-use Stev\GoogleRecaptchaBundle\Services\Recaptcha\Validator;
+use Stev\GoogleRecaptchaBundle\Services\Recaptcha\ValidatorV2;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
 use Symfony\Component\Validator\Exception\UnexpectedTypeException;
@@ -23,16 +23,16 @@ use Symfony\Component\Validator\Exception\UnexpectedTypeException;
  * for frontend
  * @see https://developers.google.com/recaptcha/docs/display
  */
-class RecaptchaValidator extends ConstraintValidator
+class RecaptchaV2Validator extends ConstraintValidator
 {
 
     /**
-     * @var Validator
+     * @var ValidatorV2
      */
     private $validator;
 
     public function __construct(
-        Validator $validator
+        ValidatorV2 $validator
     ) {
         $this->validator = $validator;
     }
@@ -40,8 +40,8 @@ class RecaptchaValidator extends ConstraintValidator
     public function validate($value, Constraint $constraint)
     {
 
-        if (!$constraint instanceof Recaptcha) {
-            throw new UnexpectedTypeException($constraint, Recaptcha::class);
+        if (!$constraint instanceof RecaptchaV2) {
+            throw new UnexpectedTypeException($constraint, RecaptchaV2::class);
         }
 
         if (true === $this->validator->validate($value)) {

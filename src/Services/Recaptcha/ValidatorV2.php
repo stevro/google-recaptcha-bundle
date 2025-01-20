@@ -7,7 +7,7 @@ namespace Stev\GoogleRecaptchaBundle\Services\Recaptcha;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 
-class Validator
+class ValidatorV2
 {
 
     /**
