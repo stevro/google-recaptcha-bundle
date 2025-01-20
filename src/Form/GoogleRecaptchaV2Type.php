@@ -2,7 +2,7 @@
 
 namespace Stev\GoogleRecaptchaBundle\Form;
 
-use Stev\GoogleRecaptchaBundle\src\Validator\Constraints\RecaptchaV2;
+use Stev\GoogleRecaptchaBundle\Validator\Constraints\RecaptchaV2;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\FormBuilderInterface;
