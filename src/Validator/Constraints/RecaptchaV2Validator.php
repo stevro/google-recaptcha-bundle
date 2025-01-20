@@ -18,10 +18,10 @@ use Symfony\Component\Validator\Exception\UnexpectedTypeException;
  * @author stefan
  *
  * for backend
- * @see https://developers.google.com/recaptcha/docs/verify
+ * @see    https://developers.google.com/recaptcha/docs/verify
  *
  * for frontend
- * @see https://developers.google.com/recaptcha/docs/display
+ * @see    https://developers.google.com/recaptcha/docs/display
  */
 class RecaptchaV2Validator extends ConstraintValidator
 {
@@ -39,7 +39,6 @@ class RecaptchaV2Validator extends ConstraintValidator
 
     public function validate($value, Constraint $constraint)
     {
-
         if (!$constraint instanceof RecaptchaV2) {
             throw new UnexpectedTypeException($constraint, RecaptchaV2::class);
         }

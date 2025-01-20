@@ -22,6 +22,7 @@ class GoogleRecaptchaV2Type extends AbstractType
             'constraints' => [
                 new RecaptchaV2(),
             ],
+            'error_bubbling' => true,
         ]);
     }
 

@@ -1,0 +1,13 @@
+parameters:
+  default_recaptcha_enabled: true
+services:
+  Stev\GoogleRecaptchaBundle\Validator\Constraints\RecaptchaV2Validator:
+    arguments:
+      - '@Stev\GoogleRecaptchaBundle\Services\Recaptcha\ValidatorV2'
+    tags:
+      - { name: validator.constraint_validator }
+  Stev\GoogleRecaptchaBundle\Services\Recaptcha\ValidatorV2:
+    arguments: ['@ReCaptcha\ReCaptcha', '@logger','@request_stack', '%env(default:default_recaptcha_enabled:bool:GOOGLE_RECAPTCHA_ENABLED)%']
+  Stev\GoogleRecaptchaBundle\Form\GoogleRecaptchaV2Type:
+    tags:
+      - { name: form.type, alias: Stev\GoogleRecaptchaBundle\Form\GoogleRecaptchaV2Type }
