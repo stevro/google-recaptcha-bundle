@@ -19,7 +19,7 @@ class ValidatorV2
     ) {
     }
 
-    public function validate($value)
+    public function validate($value): bool
     {
         if (!$this->recaptchaEnabled) {
             $this->logger->warning('Google reCAPTCHA not enabled');

@@ -20,12 +20,12 @@ use Symfony\Component\Validator\Constraint;
 class RecaptchaV2 extends Constraint
 {
 
-    public function getTargets()
+    public function getTargets(): array|string
     {
         return self::PROPERTY_CONSTRAINT;
     }
 
-    public function validatedBy()
+    public function validatedBy(): string
     {
         return RecaptchaV2Validator::class;
     }

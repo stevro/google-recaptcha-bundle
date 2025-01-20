@@ -26,18 +26,13 @@ use Symfony\Component\Validator\Exception\UnexpectedTypeException;
 class RecaptchaV2Validator extends ConstraintValidator
 {
 
-    /**
-     * @var ValidatorV2
-     */
-    private $validator;
 
     public function __construct(
-        ValidatorV2 $validator
+        private readonly ValidatorV2 $validator
     ) {
-        $this->validator = $validator;
     }
 
-    public function validate($value, Constraint $constraint)
+    public function validate($value, Constraint $constraint): void
     {
         if (!$constraint instanceof RecaptchaV2) {
             throw new UnexpectedTypeException($constraint, RecaptchaV2::class);
