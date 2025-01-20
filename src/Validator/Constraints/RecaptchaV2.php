@@ -5,7 +5,7 @@
  * For details contact contact@nimasoftware.com
  */
 
-namespace Stev\GoogleRecaptchaBundle\src\Validator\Constraints;
+namespace Stev\GoogleRecaptchaBundle\Validator\Constraints;
 
 use Symfony\Component\Validator\Constraint;
 
