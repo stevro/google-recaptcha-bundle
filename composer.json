@@ -1,5 +1,5 @@
 {
-  "name": "stev/google-recaptcha-bundle",
+  "name": "stev/GoogleRecaptchaBundle",
   "autoload": {
     "psr-4": {
       "Stev\\StevGoogleRecaptchaBundle\\": "src/"
