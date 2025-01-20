@@ -1,5 +1,5 @@
 {
-  "name": "stev/GoogleRecaptchaBundle",
+  "name": "stev/google-recaptcha-bundle",
   "type": "symfony-bundle",
   "authors": [
     {
